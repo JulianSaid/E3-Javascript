@@ -54,13 +54,26 @@ const input = document.getElementById('buscador');
 
 let items = [];
 
-const renderItems = () => {
-  caja.innerHTML = items.map((item) => {
-    return `
-    <p>${item}</p>
-    `
-  }).join('');
+//Capturar el valor del input
+
+
+
+const buscadorFilter = () => {
+  let valorInput = input.value;
+pizzas.filter(pizzas.id == getElementById(valorInput))
 };
+buscadorFilter();
+
+
+
+// const renderItems = () => {
+//   caja.innerHTML = items.map((item) => {
+//     return `
+//         <p>${pizza}</p>
+//         `
+//   }).join('');
+// };
+
 
 //REALIZAR EL EVENTO PREVENT DEFAULT PARA QUE NOSE PIERDA LA INFORMACION
 //RECORDAR PASAR EL EVENTO (e)
@@ -75,12 +88,13 @@ const submitHandler = (e) => {
   //Resetear el input para que quede vacio
   input.value = '';
 
-  renderItems();
+  buscadorFilter();
+  // renderItems();
 };
 
 //FUNCION INICIADORA
 const init = () => {
   form.addEventListener('submit', submitHandler);
-
+  
 };
 init();
