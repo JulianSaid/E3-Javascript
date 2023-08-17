@@ -52,49 +52,25 @@ const caja = document.getElementById('container-pizzas');
 const input = document.getElementById('buscador');
 
 
-let items = [];
+console.log(input.value);
 
-//Capturar el valor del input
+// let for ( i = 0, input.value === pizzas.id, i++) {
+//   console.log(pizzas);
+// }
 
-
-
-const buscadorFilter = () => {
-  let valorInput = input.value;
-pizzas.filter(pizzas.id == getElementById(valorInput))
+const filtrarID = () => {
+pizzas.map(() => {
+  if(pizzas.id === capturarValor)
+  return console.log(pizza);
+})
 };
-buscadorFilter();
 
-
-
-// const renderItems = () => {
-//   caja.innerHTML = items.map((item) => {
-//     return `
-//         <p>${pizza}</p>
-//         `
-//   }).join('');
-// };
-
-
-//REALIZAR EL EVENTO PREVENT DEFAULT PARA QUE NOSE PIERDA LA INFORMACION
-//RECORDAR PASAR EL EVENTO (e)
-const submitHandler = (e) => {
+const capturarValor = (e) => {
   e.preventDefault();
-  let item = input.value;
-  //Agregar el valor ingresado al array vacio 
-  items = []
-  items = [
-    item
-  ];
-  //Resetear el input para que quede vacio
-  input.value = '';
-
-  buscadorFilter();
-  // renderItems();
+  const valueInput = input.value;
 };
 
-//FUNCION INICIADORA
 const init = () => {
-  form.addEventListener('submit', submitHandler);
-  
+  form.addEventListener('submit', capturarValor)
 };
 init();

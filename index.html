@@ -4,27 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
     <title>Pizzeria</title>
 </head>
 
 <body>
 
-    <div class="title">
-        <h1>Pizzeria Esperanza</h1>
-    </div>
-
+<div class="container">
     <section id="busqueda">
+        <h1 class="title">Pizzeria Esperanza</h1>
         <form action="" id="form">
-            <input type="text" id="buscador" placeholder="Selecciona el número de pizza">
+            <input type="number" id="buscador" name="myImput" placeholder="Selecciona el número de pizza">
             <button class="submit"><img src="./img/lupa.svg" alt=""></button>
         </form>
 
         <div id="container-pizzas">
 
         </div>
+    </div>
     </section>
 
     <script src="./index.js"></script>
+    <script src="./app.js"></script>
 </body>
 
 </html>
